@@ -1,0 +1,25 @@
+#no-result-div {
+  display: flex;
+  justify-content: center;
+}
+
+li {
+  padding: 0.2em 0;
+  border-top: 1px solid rgba(34,36,38,.15);
+}
+
+#result-topic li:first-child{
+  border: 1px solid rgba(34,36,38,.15);
+  border-radius: 5px;
+  font-size: large;
+  margin: 1.5em;
+}
+
+h4 {
+  display: flex;
+  justify-content: center;
+}
+
+/* ul li:first-child > .topic-button{
+  
+} */
