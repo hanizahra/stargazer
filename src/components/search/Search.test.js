@@ -1,8 +1,8 @@
 import { render, screen } from '@testing-library/react';
 import Search from './Search';
 
-test('renders learn react link', () => {
+test('renders Search component', () => {
   render(<Search />);
-  const linkElement = screen.getByText(/learn react/i);
+  const linkElement = screen.getByText(/search/i);
   expect(linkElement).toBeInTheDocument();
 });

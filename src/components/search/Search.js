@@ -16,7 +16,7 @@ const Search = ({onSearchSubmit}) => {
 
   return(
     <form onSubmit={onFormSubmit} >
-      <div id="input-container" class="ui fluid action input">
+      <div id="input-container" className="ui fluid action input">
         <input 
           type="text" 
           placeholder="Enter a topic..." 
@@ -24,7 +24,7 @@ const Search = ({onSearchSubmit}) => {
           onInput={(event) => setInput(event.target.value)}
           onFocus={handleFocus}
         />
-        <div class="ui button" onClick={onFormSubmit}>Search</div>
+        <div className="ui button" onClick={onFormSubmit}>Search</div>
       </div>
     </form>
   );
