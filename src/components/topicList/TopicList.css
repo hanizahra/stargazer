@@ -1,10 +1,11 @@
 #no-result-div {
   display: flex;
   justify-content: center;
+  color: #d5b8b8;
 }
 
 li {
-  padding: 0.2em 0;
+  padding: 0.2rem 0;
   border-top: 1px solid rgb(255 253 251 / 13%);
 }
 
@@ -12,7 +13,7 @@ li {
   border: 1px solid rgb(255 253 251 / 22%);
   border-radius: 5px;
   font-size: large;
-  margin: 1.5em;
+  margin: 1.5rem;
 }
 
 h4 {
@@ -20,7 +21,3 @@ h4 {
   justify-content: center;
   color: #b7a29f;
 }
-
-/* ul li:first-child > .topic-button{
-  
-} */

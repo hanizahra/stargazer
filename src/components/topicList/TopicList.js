@@ -4,12 +4,10 @@ import Topic from '../topic/Topic';
 
 const TopicList = ({topic, onSearchSubmit}) => {
   if (!topic) return <div id="no-result-div">0 results</div>;
-  console.log('here is topic: ' + JSON.stringify(topic));
-  console.log('here is topic.relatedTopics ' + JSON.stringify(topic.relatedTopics));
   const renderTopics = topic.relatedTopics.map(({name, stargazerCount}, index) => {
     return(
       <Topic 
-        key={index} // needs to be replaced with a real id
+        key={index}
         name={name} 
         stargazerCount={stargazerCount} 
         onSearchSubmit={onSearchSubmit} 

@@ -5,10 +5,12 @@ li {
   justify-content: space-between;
 }
 
-.topic-button {
-  padding: 0;
-  border: none;
-  background: none;
+i {
+  color: #b39f33;
+}
+
+span {
+  color: #d5b8b8;
 }
 
 button {
@@ -18,10 +20,26 @@ button {
   font-weight: 700;
 }
 
-i {
-  color: #b39f33;
+.topic-button {
+  padding: 0;
+  border: none;
+  background: none;
 }
 
-span {
-  color: #d5b8b8;
+.topic-button:hover {
+  color: rgb(123, 116, 116) !important;
+}
+
+.topic-button:active {
+  color: rgb(77, 61, 82) !important;
+  background-color: transparent;
+}
+
+.topic-button:visited {
+  color: rgb(100, 6, 6) !important;
+  background-color: transparent;
+}
+
+.topic-button:focus {
+  background-color: transparent;
 }

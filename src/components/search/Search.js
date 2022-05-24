@@ -6,9 +6,7 @@ const Search = ({onSearchSubmit}) => {
   
   const onFormSubmit = (event) => {
     event.preventDefault();
-    console.log('onsubmit happend with input: ' + input);
     onSearchSubmit(input);
-    console.log('this is input and this is event.target.value: ' + input + ' ' + event.target.value);
     setInput('');
   };
 

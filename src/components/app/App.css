@@ -17,7 +17,7 @@ header {
 }
 
 h1 {
-  padding-top: 0.5em;
+  padding-top: 1rem;
   font-size: 3em;
   text-shadow: 3px 3px 0 #dd4e3c, 6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary), 12px 12px 0 #461c50;
   font-family: bungee, sans-serif;

@@ -8,7 +8,6 @@ const StargazerContent = () => {
   const [getTopics, {data}] = useLazyQuery(fetchTopic);
   
   const onSearchSubmit = (term) => {
-    console.log('onSearchSubmit function returned to parent with term: ' + term);
     getTopics({variables: {name: term}})
   };
 
