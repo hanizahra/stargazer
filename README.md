@@ -1,70 +1,50 @@
-# Getting Started with Create React App
+# GitHub Topic Explorer - STARGAZER
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The STARGAZER project is a React web application that displays all the "[topics](https://docs.github.com/en/free-pro-team@latest/graphql/reference/objects#topic)" related to a search term, along with how many "[stargazers](https://docs.github.com/en/free-pro-team@latest/graphql/reference/objects#stargazerconnection)" each topic has. A click on a topic will display the topics related to that topic.
 
-## Available Scripts
+## API
 
-In the project directory, you can run:
+This application uses the [GitHub GraphQL API](https://docs.github.com/en/graphql) to query topics and display its related topics. 
 
-### `npm start`
+### To Get Started
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Clone the repo and CD into 'stargazer'.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Copy the `.env.example` file to `.env` and insert a [Github API key](https://docs.github.com/en/free-pro-team@latest/graphql/guides/forming-calls-with-graphql#authenticating-with-graphql) at `REACT_APP_GITHUB_API_TOKEN=`.
 
-### `npm test`
+#### `yarn install`
+
+#### `yarn start`
+
+### To Test
+
+#### `yarn test`
 
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## Dev Notes
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The App component is broken down into three main components under the StargazerContent container component: Search, Topic, and TopicList. 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Libraries and Tools
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The Search component utilizes [Semantic UI](https://semantic-ui.com/) and [Materialize](https://materializecss.com/) for the input and search button.
 
-### `npm run eject`
+[Apollo Client](https://www.apollographql.com/docs/#apollo-client) is the GraphQL interface used to fetch, cache, and manage the data. 
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Future Improvements
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+* Code Structuring:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+This is my first application using GraphQL. I could improve on how the queries and Apollo client are organized in the source client. 
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+In a larger application I would likely have subdirectories for pages with their own components directories. 
 
-## Learn More
+* Refactoring:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+I would spend more time on the TopicList component list items. On hover/focus/active over only the topic names might not be enough for call-to-action. I would make the entire list item more interactive. 
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+* Additional Features:
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+I would like to implement autofill for the search bar's input using only relevant search terms. 
