@@ -9,7 +9,7 @@ const Topic = ({name, stargazerCount, onSearchSubmit}) => {
         onClick={onSearchSubmit ? () => onSearchSubmit(name) : undefined} 
         type="button">{name}
       </button>
-      <span>{stargazerCount} <i className="star outline icon"></i></span>
+      <span>{stargazerCount} <i className="star filled icon"></i></span>
     </li>
   );
 }
