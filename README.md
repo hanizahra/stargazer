@@ -45,6 +45,8 @@ In a larger application I would likely have subdirectories for pages with their 
 
 I would spend more time on the TopicList component list items. On hover/focus/active over only the topic names might not be enough for call-to-action. I would make the entire list item more interactive. 
 
+The Apollo Client useLazyQuery hook does not appear to provide a way to handle rejected promises on error, resulting in the browser debugger pausing and log messages being printed. I would use another client or refactor to use a different hook. 
+
 * Additional Features:
 
 I would like to implement autofill for the search bar's input using only relevant search terms. 
